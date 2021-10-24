@@ -1,0 +1,27 @@
+// Media query mixin
+@mixin bp($point, $minmax : min-width, $until:null) {
+	@if($minmax == "max-width") {
+		$point : $point - 1;
+	}
+
+	@if($until) {
+		@media screen and ($minmax: #{$point}px) and (max-width: #{$until}px) { @content; }
+	} @else {
+		@media screen and ($minmax: #{$point}px) { @content; }
+	}
+}
+
+// Colours
+$COLOUR_WHITE: #FFFFFF;
+$COLOUR_BLACK: #000000;
+$COLOUR_BG: #F2F2F2;
+$COLOUR_CATEGORY: #8483f0;
+
+// Standards
+$RADIUS_DEFAULT: 0.3rem;
+
+// Screen sizes
+$SCR_SMALL: 375;
+$SCR_MEDIUM: 768;
+$SCR_DESKTOP: 1024;
+$SCR_LARGE: 1280;
