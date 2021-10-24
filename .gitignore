@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# production
-/build
+# production (commented out build so it's easier to view completed task)
+# /build
 
 # misc
 .DS_Store
